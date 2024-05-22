@@ -1,0 +1,24 @@
+{
+    "distritos": [
+      { "nombre": "Ciutat Vella" },
+      { "nombre": "Eixample" },
+      { "nombre": "Extramurs" },
+      { "nombre": "Campanar" },
+      { "nombre": "La Saïdia" },
+      { "nombre": "El Pla del Real" },
+      { "nombre": "L'Olivereta" },
+      { "nombre": "Patraix" },
+      { "nombre": "Jesús" },
+      { "nombre": "Quatre Carreres" },
+      { "nombre": "Poblats Marítims" },
+      { "nombre": "Camins al Grau" },
+      { "nombre": "Algirós" },
+      { "nombre": "Benimaclet" },
+      { "nombre": "Rascanya" },
+      { "nombre": "Benicalap" },
+      { "nombre": "Pobles del Nord" },
+      { "nombre": "Pobles de l'Oest" },
+      { "nombre": "Pobles del Sud" }
+    ]
+  }
+  

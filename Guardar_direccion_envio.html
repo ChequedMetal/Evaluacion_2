@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +10,14 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-    background-color: #d3d3d3;
-    }
+            background-color: #d3d3d3;
+        }
     </style>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+     crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header class="header">
         <div class="container">
@@ -21,7 +26,8 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="index.html">Inicio</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
@@ -30,7 +36,7 @@
                                 <a class="nav-link" href="categorias.html">Categorías</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="Guardar_direccion_envio.html">Registrar direccion</a>
+                                <a class="nav-link" href="Guardar_direccion_envio.html">Realizar Pedido</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="contacto.html">Contacto</a>
@@ -49,36 +55,47 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 mx-auto">
-                    <p class="lead text-center mb-4">Por favor, complete el siguiente formulario para realizar su pedido:</p>
-                    <form>
+                    <p class="lead text-center mb-4">Por favor, complete el siguiente formulario para realizar su
+                        pedido:</p>
+                    <form action="/" method="POST" id="formulario-contacto">
                         <div class="mb-3">
                             <label for="nombre" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+                            <input type="text" class="form-control" id="nombres" placeholder="Ingrese su nombre">
                         </div>
                         <div class="mb-3">
                             <label for="direccion" class="form-label">Dirección de entrega</label>
                             <input type="text" class="form-control" id="direccion" placeholder="Ingrese su dirección">
                         </div>
                         <div class="mb-3">
-                            <label for="telefono" class="form-label">Correo electronico</label>
-                            <input type="tel" class="form-control" id="telefono" placeholder="Ingrese su Correo">
+                            <label for="correo" class="form-label">Correo electronico</label>
+                            <input type="tel" class="form-control" id="correo-electronico"
+                                placeholder="Ingrese su Correo">
                         </div>
                         <div class="mb-3">
                             <label for="telefono" class="form-label">Teléfono de contacto</label>
-                            <input type="tel" class="form-control" id="telefono" placeholder="Ingrese su teléfono">
+                            <input type="tel" class="form-control" id="numero-telefono"
+                                placeholder="Ingrese su teléfono">
                         </div>
                         <div class="mb-3">
-                            <label for="platos" class="form-label">Detalle de direccion</label>
-                            <textarea class="form-control" id="platos" rows="3" placeholder="Ingrese los platos deseados"></textarea>
+                            <label for="detalles-envio">Detalles del Envío</label>
+                <input type="text" class="form-control" id="detalles-envio" name="detalles-envio"
+                                placeholder="Ingrese detalles de la direccion.">
                         </div>
-                        <button type="submit" class="btn btn-primary">Enviar Pedido</button>
-                    </form>
-                </div>
-            </div>
+                        <button class="btn btn-primary my-3" type="button" onclick="enviarPedido()">ENVIAR
+                            PEDIDO</button>
+                            <div id="message-error" class="my-3 alert alert-danger alert-dismissible fade" role="alert">
+                                <div id="message">&nbsp;</div>
+                                </button>
+                            </div>            
+                        </form>
+                    </div>
+                    <div id="distritos-container" class="mb-3"></div>
             <div class="row mt-5">
                 <div class="col-md-6 mx-auto">
                     <h3 class="text-center">Instrucciones para realizar el pedido:</h3>
-                    <p class="lead text-center mt-3">Por favor, complete el formulario con su nombre, dirección, correo, teléfono y El detalle de la direccion. Una vez enviado el formulario, nuestro equipo procesará su pedido y se comunicará con usted para confirmarlo.</p>
+                    <p class="lead text-center mt-3">Por favor, complete el formulario con su nombre, dirección, correo,
+                        teléfono y El detalle de la direccion. Una vez enviado el formulario, nuestro equipo procesará
+                        su pedido y se comunicará con usted para confirmarlo.</p>
                 </div>
             </div>
         </div>
@@ -87,8 +104,16 @@
     <!-- Pie de página -->
     <footer class="footer bg-dark text-light py-4">
         <div class="container text-center">
-            <p>&copy;  Restaurante El Caleuche, España - 2024</p>
+            <p>&copy; Restaurante El Caleuche, España - 2024</p>
         </div>
+        <script src="./assets/js/formulario.js"></script>
+        <script src="./assets/js/integracion-owo.js"></script>
     </footer>
+    <script>
+        window.onload = function () {
+            listarDistritos();
+        }
+    </script>
 </body>
+
 </html>
