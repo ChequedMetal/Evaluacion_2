@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetas Chilenas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" i
+        ntegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: #d3d3d3; 
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="header">
+        <div class="container">
+            <h1 class="text-center">Restaurante El Caleuche</h1>
+            <!-- Barra de navegación -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">Inicio</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="categorias.html">Categorías</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Guardar_dirrecion_envio.html">Registrar direccion</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <h1 class="text-center">Menu destacados</h1>
+    </div>
+    <!-- Carrusel -->
+    <section>
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./assets/Comida_1.jpeg" class="d-block w-65 mx-auto" alt="...">
+                <div class="carousel-caption d-none d-md-block" class="bg-white p-3 rounded" style="text-shadow: -1px -1px 0 #000,  
+                1px -1px 0 #000,  
+                -1px 1px 0 #000,  
+                1px 1px 0 #000;">
+                  <h5 >Cazuela</h5>
+                  <p>Plato típico, elaborado con una presa de carne de vacuno, de pollo, de pavo, de ganso o de gallina de campo,</p>
+                    <p>más verduras variadas: zapallo, choclo, papa.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/Comida_2.jpeg" class="d-block w-65 mx-auto" alt="...">
+                <div class="carousel-caption d-none d-md-block" class="bg-white p-3 rounded" style="text-shadow: -1px -1px 0 #000,  
+                1px -1px 0 #000,  
+                -1px 1px 0 #000,  
+                1px 1px 0 #000;">
+                  <h5>Caldillo de Congrio</h5>
+                  <p>Un guiso chileno de congrio fresco en salsa de vino blanco y vegetales, servido con papas tiernas.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/Comida_3.jpeg" class="d-block w-65 mx-auto" alt="...">
+                <div class="carousel-caption d-none d-md-block" class="bg-white p-3 rounded" style="text-shadow: -1px -1px 0 #000,  
+                1px -1px 0 #000,  
+                -1px 1px 0 #000,  
+                1px 1px 0 #000;">
+                  <h5>Empanadas</h5>
+                  <p>Sabrosas empanadas rellenas de carne, huevo, aceitunas y pasas, un clásico de la cocina chilena.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+    
+    <!-- Pie de pagina -->
+    <footer class="footer fixed-bottom bg-dark text-light py-4">
+        <div class="container text-center">
+            <p>&copy;  Restaurante El Caleuche, España - 2024</p>
+        </div>
+    </footer>
+</body>
+</html>

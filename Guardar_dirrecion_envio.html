@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realizar Pedido - Restaurante Delicias</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #d3d3d3; 
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="text-center">Restaurante El Caleuche</h1>
+            <!-- Barra de navegación -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">Inicio</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="categorias.html">Categorías</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Guardar_dirrecion_envio.html">Registrar direccion</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <h1 class="text-center">Realizar Pedido</h1>
+    </div>
+    <!-- Contenido -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <p class="lead text-center mb-4">Por favor, complete el siguiente formulario para realizar su pedido:</p>
+                    <form>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+                        </div>
+                        <div class="mb-3">
+                            <label for="direccion" class="form-label">Dirección de entrega</label>
+                            <input type="text" class="form-control" id="direccion" placeholder="Ingrese su dirección">
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label">Correo electronico</label>
+                            <input type="tel" class="form-control" id="telefono" placeholder="Ingrese su Correo">
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label">Teléfono de contacto</label>
+                            <input type="tel" class="form-control" id="telefono" placeholder="Ingrese su teléfono">
+                        </div>
+                        <div class="mb-3">
+                            <label for="platos" class="form-label">Detalle de direccion</label>
+                            <textarea class="form-control" id="platos" rows="3" placeholder="Ingrese los platos deseados"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Pedido</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-6 mx-auto">
+                    <h3 class="text-center">Instrucciones para realizar el pedido:</h3>
+                    <p class="lead text-center mt-3">Por favor, complete el formulario con su nombre, dirección, correo, teléfono y El detalle de la direccion. Una vez enviado el formulario, nuestro equipo procesará su pedido y se comunicará con usted para confirmarlo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer bg-dark text-light py-4">
+        <div class="container text-center">
+            <p>&copy;  Restaurante El Caleuche, España - 2024</p>
+        </div>
+    </footer>
+</body>
+</html>
