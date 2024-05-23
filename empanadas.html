@@ -39,7 +39,7 @@
                             </li>
                         </ul>
                         <button class="btn btn-outline-primary ms-auto" data-bs-toggle="modal"
-                            data-bs-target="#cartModal">Carrito <span id="cart-count" class="badge bg-secondary">0</span></button>
+                            data-bs-target="#cartModal">Carrito <span id="contador-carrito" class="badge bg-secondary">0</span></button>
                     </div>
                 </div>
             </nav>
@@ -55,8 +55,8 @@
                     <div class="card-body">
                         <h5 class="card-title">Empanada de Pino</h5>
                         <p class="card-text">Empanada tradicional rellena de carne, cebolla, aceitunas, pasas y huevo duro.</p>
-                        <p class="card-text">Precio : 3.00 €</p>
-                        <button class="btn btn-primary add-to-cart" data-name="Empanada de Pino" data-price="3.00">Agregar al carrito</button>
+                        <p class="card-text">Precio: 2.00 €</p>
+                        <button class="btn btn-primary agregar-carro" nombre-producto="Empanada de Pino" precio="2.00">Agregar al carrito</button>
                     </div>
                 </div>
             </div>
@@ -66,8 +66,8 @@
                     <div class="card-body">
                         <h5 class="card-title">Empanada de Queso</h5>
                         <p class="card-text">Empanada tradicional rellena de delicioso queso fundido.</p>
-                        <p class="card-text">Precio : 4.00 €</p>
-                        <button class="btn btn-primary add-to-cart" data-name="Empanada de Queso" data-price="4.00">Agregar al carrito</button>
+                        <p class="card-text">Precio: 1.50 €</p>
+                        <button class="btn btn-primary agregar-carro" nombre-producto="Empanada de Queso" precio="1.50">Agregar al carrito</button>
                     </div>
                 </div>
             </div>
@@ -82,15 +82,15 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <ul id="cart-items" class="list-group mb-3"></ul>
+                    <ul id="items-carrito" class="list-group mb-3"></ul>
                     <div class="d-flex justify-content-between">
-                        <strong>Total:</strong> <span id="cart-total">0.00 €</span>
+                        <strong>Total:</strong> <span id="total-carrito">0.00 €</span>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary finalize-purchase">Finalizar Compra</button>
-                    <button type="button" class="btn btn-danger" id="clear-cart">Vaciar Carrito</button>
+                    <button type="button" class="btn btn-primary finalizar-compra">Finalizar Compra</button>
+                    <button type="button" class="btn btn-danger" id="vaciar-carrito">Vaciar Carrito</button>
                 </div>
             </div>
         </div>

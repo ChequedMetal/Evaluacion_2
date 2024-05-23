@@ -1,53 +1,53 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const cartCount = document.getElementById('cart-count');
-    const cartItems = document.getElementById('cart-items');
-    const cartTotal = document.getElementById('cart-total');
-    const clearCartButton = document.getElementById('clear-cart');
-    const finalizePurchaseButton = document.querySelector('.finalize-purchase'); 
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    const contadorCarrito = document.getElementById('contador-carrito');
+    const itemsCarrito = document.getElementById('items-carrito');
+    const totalCarrito = document.getElementById('total-carrito');
+    const botonVaciarCarrito = document.getElementById('vaciar-carrito');
+    const botonFinalizarCompra = document.querySelector('.finalizar-compra'); 
     
-    function updateCart() {
-        localStorage.setItem('cart', JSON.stringify(cart));
-        cartCount.textContent = cart.reduce((total, item) => total + item.quantity, 0);
-        cartItems.innerHTML = '';
-        cart.forEach(item => {
+    function actualizarCarrito() {
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+        contadorCarrito.textContent = carrito.reduce((total, item) => total + item.cantidad, 0);
+        itemsCarrito.innerHTML = '';
+        carrito.forEach(item => {
             const li = document.createElement('li');
             li.classList.add('list-group-item');
-            li.textContent = `${item.name} - ${item.quantity} x ${item.price.toFixed(2)} €`;
-            cartItems.appendChild(li);
+            li.textContent = `${item.nombre} - ${item.cantidad} x ${item.precio.toFixed(2)} €`;
+            itemsCarrito.appendChild(li);
         });
-        const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-        cartTotal.textContent = `${total.toFixed(2)} €`;
+        const total = carrito.reduce((suma, item) => suma + item.precio * item.cantidad, 0);
+        totalCarrito.textContent = `${total.toFixed(2)} €`;
     }
 
-    document.querySelectorAll('.add-to-cart').forEach(button => {
-        button.addEventListener('click', function () {
-            const name = this.getAttribute('data-name');
-            const price = parseFloat(this.getAttribute('data-price'));
+    document.querySelectorAll('.agregar-carro').forEach(boton => {
+        boton.addEventListener('click', function () {
+            const nombre = this.getAttribute('nombre-producto');
+            const precio = parseFloat(this.getAttribute('precio'));
 
-            const item = cart.find(i => i.name === name);
+            const item = carrito.find(i => i.nombre === nombre);
             if (item) {
-                item.quantity += 1;
+                item.cantidad += 1;
             } else {
-                cart.push({ name, price, quantity: 1 });
+                carrito.push({ nombre, precio, cantidad: 1 });
             }
 
-            updateCart();
+            actualizarCarrito();
         });
     });
 
-    if (clearCartButton) {
-        clearCartButton.addEventListener('click', function () {
-            cart = [];
-            updateCart();
+    if (botonVaciarCarrito) {
+        botonVaciarCarrito.addEventListener('click', function () {
+            carrito = [];
+            actualizarCarrito();
         });
     }
 
-    if (finalizePurchaseButton) {
-        finalizePurchaseButton.addEventListener('click', function () {
+    if (botonFinalizarCompra) {
+        botonFinalizarCompra.addEventListener('click', function () {
             window.location.href = 'Guardar_direccion_envio.html';
         });
     }
 
-    updateCart(); 
+    actualizarCarrito(); 
 });

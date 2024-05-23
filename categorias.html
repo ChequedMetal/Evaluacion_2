@@ -36,7 +36,7 @@
                             </li>
                         </ul>
                         <button class="btn btn-outline-primary ms-auto" data-bs-toggle="modal"
-                            data-bs-target="#cartModal">Carrito <span id="cart-count" class="badge bg-secondary">0</span></button>
+                            data-bs-target="#cartModal">Carrito <span id="contador-carrito" class="badge bg-secondary">0</span></button>
                     </div>
                 </div>
             </nav>
@@ -88,15 +88,15 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <ul id="cart-items" class="list-group mb-3"></ul>
+                    <ul id="items-carrito" class="list-group mb-3"></ul>
                     <div class="d-flex justify-content-between">
-                        <strong>Total:</strong> <span id="cart-total">0.00 €</span>
+                        <strong>Total:</strong> <span id="total-carrito">0.00 €</span>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary finalize-purchase">Finalizar Compra</button>
-                    <button type="button" class="btn btn-danger" id="clear-cart">Vaciar Carrito</button>
+                    <button type="button" class="btn btn-primary finalizar-compra">Finalizar Compra</button>
+                    <button type="button" class="btn btn-danger" id="vaciar-carrito">Vaciar Carrito</button>
                 </div>
             </div>
         </div>
