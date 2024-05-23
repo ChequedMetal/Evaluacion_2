@@ -27,6 +27,7 @@ function enviarPedido(){
             messageElement.classList.remove('alert-danger');
             messageElement.classList.add('alert-success');
             messageTextElement.innerHTML = 'Datos almacenados.';
+            window.location.href = 'pago.html';
         }else{
             messageElement.classList.add('show');
             messageElement.classList.remove('alert-success');

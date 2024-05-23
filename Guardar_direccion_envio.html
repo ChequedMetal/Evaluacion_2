@@ -36,9 +36,6 @@
                                 <a class="nav-link" href="categorias.html">Categorías</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="Guardar_direccion_envio.html">Realizar Pedido</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link" href="contacto.html">Contacto</a>
                             </li>
                         </ul>
@@ -50,7 +47,6 @@
     <div class="container">
         <h1 class="text-center">Realizar Pedido</h1>
     </div>
-    <!-- Contenido -->
     <section class="py-5">
         <div class="container">
             <div class="row">
@@ -81,6 +77,13 @@
                 <input type="text" class="form-control" id="detalles-envio" name="detalles-envio"
                                 placeholder="Ingrese detalles de la direccion.">
                         </div>
+                        <div id="distritos-container" class="mb-3"></div>
+                        <div class="my-3">
+                            <label for="distritos" class="form-label">Distrito</label>
+                            <select id="distritos" class="form-select" required>
+                                <option value="">Seleccione un distrito</option>
+                            </select>
+                        </div>
                         <button class="btn btn-primary my-3" type="button" onclick="enviarPedido()">ENVIAR
                             PEDIDO</button>
                             <div id="message-error" class="my-3 alert alert-danger alert-dismissible fade" role="alert">
@@ -89,7 +92,6 @@
                             </div>            
                         </form>
                     </div>
-                    <div id="distritos-container" class="mb-3"></div>
             <div class="row mt-5">
                 <div class="col-md-6 mx-auto">
                     <h3 class="text-center">Instrucciones para realizar el pedido:</h3>
@@ -101,7 +103,6 @@
         </div>
     </section>
 
-    <!-- Pie de página -->
     <footer class="footer bg-dark text-light py-4">
         <div class="container text-center">
             <p>&copy; Restaurante El Caleuche, España - 2024</p>

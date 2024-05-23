@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const cartItems = document.getElementById('cart-items');
     const cartTotal = document.getElementById('cart-total');
     const clearCartButton = document.getElementById('clear-cart');
-    const finalizePurchaseButton = document.querySelector('.finalize-purchase'); // Clase específica para el botón de finalizar compra
-
+    const finalizePurchaseButton = document.querySelector('.finalize-purchase'); 
+    
     function updateCart() {
         localStorage.setItem('cart', JSON.stringify(cart));
         cartCount.textContent = cart.reduce((total, item) => total + item.quantity, 0);
@@ -45,9 +45,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (finalizePurchaseButton) {
         finalizePurchaseButton.addEventListener('click', function () {
-            window.location.href = 'pago.html';
+            window.location.href = 'Guardar_direccion_envio.html';
         });
     }
 
-    updateCart();  
+    updateCart(); 
 });
